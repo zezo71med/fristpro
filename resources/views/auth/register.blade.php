@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -12,7 +14,8 @@
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Sing.name') }}</label>
+                                <label for="name"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('Sing.name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
@@ -84,9 +87,13 @@
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Sing.Register') }}
                                     </button>
-                                </div>
+                                    <a href="{{url('redirect/facebook')}}"><img
+                                            src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" width="112"
+                                            class="img" alt="facebook">  </a></div>
+
+
                             </div>
-                        </form>
+                        </form>   <a class="right" href="{{ route('login') }}"><button class="btn btn-primary" >{{ __('Sing.Login') }}</button> </a>
                     </div>
                 </div>
             </div>

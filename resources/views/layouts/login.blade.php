@@ -1,7 +1,7 @@
-{{--@extends('booster')--}}
+  @extends('booster')
 
-{{--@section('con')--}}
-{{----}}
+@section('con')
+
     <?php
     $errors_arr=array();
     if(isset($_GET['error_fields'] )){
@@ -56,7 +56,35 @@
             for="female" class="fontsex1">female</label> <input type="radio" name="female" id=""><br><label
             for="userinfo">descripion :</label>
        <textarea cols="18" rows="2"> pleas enter text</textarea>
-        <input type="submit" name="submit" value="Register"><br>
+        <input type="submit" name="submit" value="Register">
+
+        <div class="col-md-6">
+            <a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="{{ url('login/twitter') }}" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="{{ url('login/linkedin') }}" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="{{ url('login/github') }}" class="btn btn-social-icon btn-github"><i class="fa fa-github"></i></a>
+            <a href="{{ url('login/bitbucket') }}" class="btn btn-social-icon btn-bitbucket"><i class="fa fa-bitbucket"></i></a>
+        </div>
+
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '1215259552565894',
+                    xfbml      : true,
+                    version    : 'v14.0'
+                });
+                FB.AppEvents.logPageView();
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
     </form>
     <?php
 

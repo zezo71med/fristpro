@@ -13,6 +13,7 @@ return [
     'Forgot'   =>'Forgot Your Password?',
     'Logout'   =>'Logout',
     'Reset'    =>'Reset Password',
+    'UName'    =>'User Name',
 
 
 

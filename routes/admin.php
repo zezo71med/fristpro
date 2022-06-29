@@ -56,10 +56,10 @@
 //Route::get('/login2','newcontroller@newcontro2');
 //Route::get('/login3',[\App\Http\Controllers\Newcontroller::class,'newcontro3']);
 //});
-////route::get('/login',function (){
-////   return view('layouts.login');
-//
-////});
+route::get('/login125',function (){
+   return view('layouts.login');
+
+});
 ////route::ck->middleware('Front')
 //
 ////Route::resource('news','recontroller');
